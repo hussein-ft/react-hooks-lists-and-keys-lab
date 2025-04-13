@@ -1,17 +1,19 @@
+
 import React from "react";
-import NavBar from "./NavBar";
-import Home from "./Home";
-import About from "./About";
-import ProjectList from "./ProjectList";
-import user from "../data/user";
+import NavBar from "./components/NavBar";
+import Home from "./components/Home";
+import About from "./components/About";
+import ProjectList from "./components/ProjectList";
+import projects from "./data/projects";
+import { username, city, color, bio, links } from "./data/user";
 
 function App() {
   return (
     <div>
       <NavBar />
-      <Home username={user.name} city={user.city} color={user.color} />
-      <About bio={user.bio} links={user.links} />
-      <ProjectList projects={user.projects} />
+      <Home name={username} city={city} color={color} />
+      <About bio={bio} links={links} />
+      <ProjectList projects={projects} />
     </div>
   );
 }
